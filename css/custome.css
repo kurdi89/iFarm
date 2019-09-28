@@ -1,0 +1,29 @@
+.ifarm-title {
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: unset !important;
+    font-size: 5em !important;
+
+}
+body, a, span,p {
+    font-family: 'Tajawal', sans-serif;
+}
+
+.o-video {
+  width: 100%;
+  height: 0;
+  position: relative;
+  padding-top: 56.25%; /* 9 / 16 * 100 */
+}
+.o-video > iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+}
+
+.brand-name {
+    font-weight: 900;
+    font-size: xx-large;
+}
