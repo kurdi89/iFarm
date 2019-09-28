@@ -1,240 +1,238 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>iFarm | آيفارم الزراعة الذكية</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<!DOCTYPE html>
+<html lang="en">
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="css/fontAwesome.css">
-        <link rel="stylesheet" href="css/tooplate-style.css">
-        <link rel="stylesheet" href="css/custome.css">
-        <!-- <link href="https://fonts.googleapis.com/css?family=Tajawal:300,400,500,700,900|Ubuntu:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet"> -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--begin::Fonts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                "families": [
+                    "Poppins:300,400,500,600,700", "Cairo:300,400,500,600,700",
+                    "Tajawal:300,400,500,600,700"
+                ]
+            },
+            active: function () {
+                sessionStorage.fonts = true;
+            }
+        });
+    </script>
+    <link href="images/favicon/favicon.png" rel="icon">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!--fullPage-->
+    <link rel="stylesheet" type="text/css" href="./css/fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="./css/custome-fullPage.css" />
+    <!-- Animjs-->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script> -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/custome-menu-svg.css" />
+    <link rel="stylesheet" type="text/css" href="./css/hamburger-menu.css" />
+    <link rel="stylesheet" type="text/css" href="./css/preloader.css" />
+    <link rel="stylesheet" type="text/css" href="./css/3D-asset.css" />
 
+    <title> iFarm - SA | الزراعة الذكية</title>
+    <style>
+        #preload-inner-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            /* background: #5f0128; */
+            z-index: 200;
+        }
+        #preload-icon{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%)
+        }
+        #preload-container {
+            position: fixed;
+            top: 0;
+            left:0;
+            width: 100%;
+            height: 100vh;
+            /* background: #343536; */
+            /* background: #012e5f; */
+            background: #131669;
+            z-index: 200;
+            pointer-events: none;
+            opacity: 1;
+            /* transition: opacity 2s ease; */
+            animation: hide 1s ease forwards 4.5s;
+        }
+        #preload-icon #preload-frame {
+            stroke-dasharray: 790px;
+            stroke-dashoffset: 790px;
+            transform: rotate(0deg);
+            transform-origin: 50% 50%;
+            animation: line-anim 1.4s ease forwards 2s, rotate 1.5s ease-in-out forwards 3s;
+        }
+        #preload-icon #preload-content {
+            stroke-dasharray: 790px;
+            stroke-dashoffset: 790px;
+            /* animation:  */
+            animation: line-anim 1.4s ease forwards 2s,fill 1s ease forwards 3.4s;
+        }
+        #fp-nav {
+            opacity: 0;
+            animation: show 0.8s ease forwards 4.2s;
+        }
+        @keyframes line-anim{
+            to {
+                stroke-dashoffset : 0;
+            }
+        }
+        @keyframes fill {
+            from {
+                fill : transparent;
+            }
+            to {
+                /* fill : #343536; */
+                /* fill : #012e5f; */
+                fill : #FBC55D;
+            }
+        }
+        @keyframes hide{
+            to {
+                opacity : 0;
+            }
+        }
+        @keyframes show{
+            to {
+                opacity : 1;
+            }
+        }
+        @keyframes rotate{
+            to {
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+</head>
 
-        <!-- <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-
-
-        <link rel="stylesheet" href="/fullpage/fullpage.css" />
-        <script src="/fullpage/fullpage.js"></script> -->
-
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-    </head>
-    <body>
-      <!-- Image and text -->
-        <nav class="navbar navbar-light bg-light">
-          <a class="navbar-brand brand-name" href="#">
-            <img src="/img/logo.png" width="30" height="30" class="" alt="">
-            iFarm | الزراعة الذكية
-          </a>
-        </nav>
-        <section class="first-section">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="text-content">
-                  <!-- <h2>iFarm</h2> -->
-                  <span class="ifarm-title text-dark">iFarm</span>
-                  <div class="line-dec"></div>
-                  <span class="text-dark">حلول الزراعة الذكية اصبحت اسهل</span>
+<body class="text-center">
+    <main role="main" class="w-100 h-100 text-center">
+        <div id="fullpage">
+            <!-- background:url('./images/section-1-bg-back.svg'); -->
+            <div class="section" style="background-color:#fff;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;">
+            <!-- preloader starts-->
+            <div id="preload-container">
+                <div id="preload-inner-container">
+                    <!-- <svg id="preload-icon" width="205" height="205" viewBox="0 0 205 205" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path id="preload-frame" d="M27.5 2.5H177.5C191.307 2.5 202.5 13.6929 202.5 27.5V177.5C202.5 191.307 191.307 202.5 177.5 202.5H27.5C13.6929 202.5 2.5 191.307 2.5 177.5V27.5C2.5 13.6929 13.6929 2.5 27.5 2.5Z" stroke="#FBC55D" stroke-width="5"/>
+                        <path id="preload-content" d="M149 37C155.4 31 157.333 33.8333 157.5 36C146.7 66.8 108 75.5 90 76C73.2 77.2 64.6667 84.1667 62.5 87.5C61.7 96.3 73.1667 108.5 79 113.5C102.6 129.9 117.5 128.667 122 126L179 104C191.8 97.6 180.333 115 173 124.5C161 129.7 96.3333 153.333 65.5 164.5C40.7 172.5 24.1667 169.833 19 167.5V143.5C32.2 152.3 65.8333 145.833 80.9999 141.5C44.5999 120.3 49.1666 91.3333 55.9999 79.5C67.9999 59.1 99.6666 52.6667 114 52C135.2 51.6 146.167 41.8333 149 37Z" stroke="#FBC55D" stroke-width="5"/>
+                    </svg> -->
+                    <svg id="preload-icon" width="100" height="100" viewBox="0 0 205 205" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow: visible">
+                        <path id="preload-frame" d="M27.5 2.5H177.5C191.307 2.5 202.5 13.6929 202.5 27.5V177.5C202.5 191.307 191.307 202.5 177.5 202.5H27.5C13.6929 202.5 2.5 191.307 2.5 177.5V27.5C2.5 13.6929 13.6929 2.5 27.5 2.5Z" stroke="#FBC55D" stroke-width="5"/>
+                        <path id="preload-content" d="M20.5 166.489V146.07C23.7457 147.633 27.6962 148.542 31.9632 149.001C37.3397 149.578 43.36 149.453 49.3947 148.919C61.4635 147.851 73.7587 145.129 81.412 142.942L84.7964 141.975L81.7548 140.204C63.8571 129.78 56.1999 117.561 53.7509 106.659C51.2897 95.7016 54.0457 85.8867 57.2959 80.2552C63.0466 70.4833 73.5912 63.9402 84.6558 59.7529C95.687 55.5783 107.017 53.8287 114.049 53.4993C135.415 53.09 146.881 43.3466 150.178 37.953C151.645 36.5954 152.798 35.79 153.678 35.3483C154.594 34.8883 155.104 34.8756 155.328 34.9149C155.555 34.9548 155.855 35.1821 155.969 35.829C150.691 50.5245 138.789 60.0542 125.825 65.999C112.762 71.9893 98.7907 74.2552 89.9584 74.5006L89.9257 74.5015L89.8931 74.5038C72.7643 75.7273 63.7329 82.8508 61.2423 86.6825L61.0398 86.9941L61.0062 87.3642C60.7753 89.9038 61.4339 92.5773 62.5415 95.1626C63.6542 97.7596 65.2624 100.366 67.0522 102.811C70.6297 107.698 75.0391 112.081 78.0238 114.639L78.0816 114.688L78.144 114.732C90.0757 123.023 99.8917 126.916 107.376 128.372C114.7 129.798 119.928 128.91 122.651 127.357L179.54 105.399L179.607 105.374L179.671 105.342C181.22 104.567 182.264 104.226 182.914 104.141C183.073 104.12 183.185 104.116 183.262 104.119C183.271 104.244 183.269 104.479 183.19 104.873C183.047 105.582 182.712 106.521 182.188 107.66C180.126 112.134 175.668 118.561 172.049 123.276C159.238 128.746 95.5989 152.004 65.0144 163.081C41.8012 170.564 26.134 168.532 20.5 166.489ZM183.401 104.141C183.4 104.142 183.39 104.14 183.373 104.131C183.394 104.136 183.402 104.14 183.401 104.141Z" stroke="#FBC55D" stroke-width="3"/>
+                    </svg>
+                        
                 </div>
-              </div>
             </div>
-          </div>
-        </section>
-
-        <section class="second-section">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-3 col-sm-6">
-                <div class="">
-                  <div class="chart-data">
-                    <img src="img/chart-data.png" alt="">
-                  </div>
-                  <p style="color:white; text-align : right">  تابع جودة تربة المحاصيل عن قرب ، اتخذ قرارات اسرع</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-
-        <section class="fourth-section">
-          <div class="container">
-              <div class="row">
-                <!-- <div class="col-md-3 col-sm-6">
-                  <div class="send-to-portfolio">
-                    <span>Do you want to see more?</span>
-                    <div class="primary-button">
-                      <a href="portfolio-page.html">Visit gallery</a>
+            <!-- preloader ends -->
+                <!--BEGIN:: top menu and logo-->
+                <div class="w-100 h-100 bg-transparent" style="position: absolute;z-index:1;top:-3px;left:-8px;">
+                    <div class="container-fluid bg-transparent w-100" id="top-navbar-container" style="position: absolute;z-index:3;top:0;left:0;height: 66px;
+                    padding: 8px;">
+                        <div class="row h-100 w-100 mx-0 p-2">
+                            <!-- Hamburger Menu -->
+                            <div class="d-block p-2">
+                                <div class="hamburger-menu">
+                                    <div class="line-1 no-animation"></div>
+                                    <div class="line-2 no-animation"></div>
+                                    <div class="line-3 no-animation"></div>
+                                </div>
+                            </div>
+                            <!-- Hamburger Menu -->
+                            <!-- Contact Menu -->
+                            <div class="d-block  py-2 px-3">
+                                <div class="Contact-menu">
+                                    <i class="fa fa-lg fa-twitter"></i>
+                                </div>
+                            </div>
+                            <div class="d-block  py-2 px-3">
+                                <div class="Contact-menu">
+                                    راسلني
+                                </div>
+                            </div>
+                            <div class="d-block  py-2 px-3">
+                                <div class="Contact-menu">
+                                    <a href="/blog" target="_blank" class="text-white">مدونتي</a>
+                                </div>
+                            </div>
+                            <!-- Contact Menu -->
+                            <!-- logo -->
+                            <div class="d-block ml-auto py-2 px-3" >
+                                <div class="logo-container" id="logo-container" style=" position: absolute; top: 45px; right: 70px;">
+                                    <a href="/" class="logo">
+                                        <!-- <img src="./images/Logo/Golden-logo.png" alt="Abdullah Alkurdi" width="200"> -->
+                                        <img src="./images/Logo/logo.svg" alt="Abdullah Alkurdi" width="75" class="">
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- logo -->
+                        </div>
                     </div>
-                  </div>
-                </div> -->
-                <div class="col-md-12">
-                  <div class="video">
-                      <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/ooNoqdZ8n6Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                      <div class="o-video">
-                        <iframe src="https://www.youtube.com/embed/ooNoqdZ8n6Q" allowfullscreen></iframe>
-                      </div>
-                    <span></span>
-                  </div>
-                </div>
-              </div>
 
-          </div>
-        </section>
+                        
 
 
-        <section class="third-section">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-10 col-md-offset-">
-                <div class="left-image col-md-9">
-                  <img src="img/mockup.png" alt="">
-                </div>
-                <div class="right-text col-md-3">
-                  <h4><br>منصة ذكية تساعدك في اتخاذ القرار</h4>
-                  <p>منصة رقمية تعرض حميع المؤشرات الرئيسية التي تساعدك على الحصول على جودة محاصيل عالية بكل سهولة و اتخاذ القرارات المناسبة في الوقت المناسب</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- <div class="container">
-            <div class="row">
-              <div class="col-md-3 col-sm-6">
-                <div class="service-item">
-                  <div class="icon">
-                    <img src="img/first-icon.png" alt="">
-                  </div>
-                  <h4>Quick Editing</h4>
-                  <p>Aliquam ex velit, viverra eu tristique vel, rhoncus nec ligula. In vel massa sed dolor pharetra interdum vitae posuere.</p>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-6">
-                <div class="service-item">
-                  <div class="icon">
-                    <img src="img/second-icon.png" alt="">
-                  </div>
-                  <h4>Responsive Layout</h4>
-                  <p>Sed pulvinar ipsum id leo volutpat, in convallis lectus molestie. Aliquam nisi sapien, faucibus eu consequat id, egestas vitae augue.</p>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-6">
-                <div class="service-item">
-                  <div class="icon">
-                    <img src="img/third-icon.png" alt="">
-                  </div>
-                  <h4>Quick Support</h4>
-                  <p>Aliquam ex velit, viverra eu tristique vel, rhoncus nec ligula. In vel massa sed dolor pharetra interdum vitae posuere.</p>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-6">
-                <div class="service-item">
-                  <div class="icon">
-                    <img src="img/fourth-icon.png" alt="">
-                  </div>
-                  <h4>Voice Chat</h4>
-                  <p>Sed pulvinar ipsum id leo volutpat, in convallis lectus molestie. Aliquam nisi sapien, faucibus eu consequat id, egestas vitae augue.</p>
-                </div>
-              </div>
-            </div>
-          </div> -->
-        </section>
 
-        
 
-        <!-- <section class="fivth-section">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1"> 
-                <div class="left-text col-md-8">
-                  <h4><em>Aliquam efficitur</em><br>augue et libero vulputate feugiat</h4>
-                  <p>Mauris eget orci porta, aliquam neque sit amet, porttitor dui. Donec efficitur vehicula justo quis varius. Vivamus pharetra lorem eget turpis ornare tempus. Vivamus ac sodales lectus. Morbi rhoncus feugiat neque ultrices rhoncus. Maecenas ultrices, nisl pellentesque hendrerit dignissim, ante purus hendrerit urna, eu tristique est massa quis risus.</p>
                 </div>
-                <div class="right-image col-md-4">
-                  <img src="img/right-image.png" alt="">
-                </div>
-              </div>
-            </div>
-          </div>
-        </section> -->
-
-        <section class="sixth-section">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="row">
-                  <form id="contact" action="" method="post">
-                    <div class="col-md-6">
-                      <fieldset>
-                        <input name="name" type="text" class="form-control" id="name" placeholder="الاسم" required>
-                      </fieldset>
+                <!--END:: top menu and logo-->
+                <div class="container">
+                    <div class="row">
                     </div>
-                    <div class="col-md-6">
-                      <fieldset>
-                        <input name="email" type="email" class="form-control" id="email" placeholder="البريد الالكتروني" required>
-                      </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <fieldset>
-                        <textarea name="message" rows="6" class="form-control" id="message" placeholder="رسالتك هنا" required></textarea>
-                      </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <fieldset>
-                        <button type="submit" id="form-submit" class="btn">ارسل</button>
-                      </fieldset>
-                    </div>
-                  </form>
                 </div>
-              </div>
-              <div class="col-md-5">
-                <div class="right-info">
-                  <ul>
-                    <li><a href="#"> تواصل معنا او اترك رسالتك </a></li>
-                    <li><a href="#"><i class="fa fa-phone"></i>050 66 344 82/ 0540 840 600</a></li>
-                  </ul>
+            </div>
+            <div class="section bg-light">
+            <!-- section-2-right-bg -->
+            <div class="section-2-right-bg-container w-100 h-100">           
+            </div>
+                
+            <!-- section-2-right-bg -->
+                    
+
+                    
+            </div>
+            <div class="section">
+                <div class="container" >
+                    <div class="row">
+                        Section 3
+                        <img src='./images/page-1.gif' width="">
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-        </section>
-
-        <footer>
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <ul>
-                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                  <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                </ul>
-                <p>Copyright &copy; 2019 iFarm Saudi Arabia | جميع الحقوق محفوظة لآي فارم - الزراعة الذكية 2019</p>
-              </div>
+            <div class="section">
             </div>
-          </div>
-        </footer>
+            <div class="section">
+                <!-- section -5 bg  -->
 
-        <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+                                     
+                <!-- section -5 bg  -->
+            </div>
+            <div class="section">
+                <!-- section -6 bg  -->
 
-        <script src="js/vendor/bootstrap.min.js"></script>
+                <!-- section -6 bg  -->
+            </div>
+        </div>
+    </main>
 
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
 
-    </body>
+    <script src="./js/main.js" defer></script>
+    <script src="./js/main-menu.js" defer></script>
+    <!-- <script src="./js/fullPage.js"></script> -->
+    <!-- <script src="./js/fullPageLoader.js"></script> -->
+</body>
+
 </html>
